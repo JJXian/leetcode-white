@@ -1,4 +1,4 @@
-# leetcode白板代码答案
+# 算法总结
 
 ## 贪心算法 GreedyAlgorithm
 > 贪心算法
