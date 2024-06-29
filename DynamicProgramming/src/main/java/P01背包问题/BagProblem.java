@@ -1,5 +1,6 @@
 package P01背包问题;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -31,6 +32,7 @@ public class BagProblem {
         int[] weight = {2 ,2, 3, 1, 5, 2};
         int[] value = {2 ,3 ,1 ,5 ,4 ,3};
         int bagSize = 1;
+
         int res = findMax(weight,value,bagSize);
         System.out.println("结果是：" + res);
 //        testWeightBagProblem(weight,value,bagSize);
