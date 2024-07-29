@@ -20,6 +20,7 @@ public class Solution {
 
         Deque<Integer> deque = new LinkedList<>();
 
+        Deque<Integer> deque1 = new ArrayDeque<>();
 
 
         for(int i =0 ; i < num.length;i++){
