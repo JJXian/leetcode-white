@@ -1,4 +1,4 @@
-package P01背包问题;
+package com.xian.P01背包问题;
 
 import java.util.Arrays;
 import java.util.Scanner;

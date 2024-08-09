@@ -1,4 +1,4 @@
-package T63不同路径2;
+package com.xian.T63不同路径2;
 
 import java.util.Scanner;
 

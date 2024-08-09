@@ -1,4 +1,4 @@
-package T746最小花费爬楼梯;
+package com.xian.T746最小花费爬楼梯;
 
 import java.util.Scanner;
 

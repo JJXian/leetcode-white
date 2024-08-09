@@ -1,4 +1,4 @@
-package T70爬楼梯;
+package com.xian.T70爬楼梯;
 
 import java.util.Scanner;
 
