@@ -1,4 +1,4 @@
-package T56合并区间;
+package GreedyAlgorithm.T56合并区间;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -14,38 +14,38 @@ public class Solution {
         System.out.println("请输入有几组数：");
         int num = sc.nextInt();
         int[][] intervals = new int[num][2];
-        for(int i = 0;i<num;i++){
+        for (int i = 0; i < num; i++) {
             int x = sc.nextInt();
             int y = sc.nextInt();
             intervals[i][0] = x;
             intervals[i][1] = y;
         }
         int[][] res = merge(intervals);
-        for(int[] x : res){
-            System.out.println(x[0]+","+x[1]);
+        for (int[] x : res) {
+            System.out.println(x[0] + "," + x[1]);
         }
 
 
     }
 
-    public static int[][] merge(int[][] intervials){
-        if(intervials.length < 2){
+    public static int[][] merge(int[][] intervials) {
+        if (intervials.length < 2) {
             return intervials;
         }
         List<int[]> res = new LinkedList<>();
 
         int start = intervials[0][0];
         int end = intervials[0][1];
-        for(int i = 1;i<intervials.length;i++){
-            if(intervials[i][0] <end){
-                end = Math.max(end,intervials[i][1]);
-            }else{
-                res.add(new int[]{start,end});
+        for (int i = 1; i < intervials.length; i++) {
+            if (intervials[i][0] < end) {
+                end = Math.max(end, intervials[i][1]);
+            } else {
+                res.add(new int[]{start, end});
                 start = intervials[i][0];
                 end = intervials[i][1];
             }
         }
-        res.add(new int[]{start,end});
+        res.add(new int[]{start, end});
         return res.toArray(new int[res.size()][]);
     }
 }

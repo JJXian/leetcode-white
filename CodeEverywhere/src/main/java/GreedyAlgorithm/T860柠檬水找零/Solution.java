@@ -1,4 +1,4 @@
-package T860柠檬水找零;
+package GreedyAlgorithm.T860柠檬水找零;
 
 import java.util.Scanner;
 
@@ -6,21 +6,21 @@ class Solution {
     public static boolean lemonadeChange(int[] bills) {
         int fiveCount = 0;
         int tenCount = 0;
-        for(int i = 0; i < bills.length; i++) {
-            if(bills[i] == 5) {
+        for (int i = 0; i < bills.length; i++) {
+            if (bills[i] == 5) {
                 fiveCount++;
-            } else if(bills[i] == 10) {
-                if(fiveCount == 0) {
+            } else if (bills[i] == 10) {
+                if (fiveCount == 0) {
                     return false;
                 }
                 fiveCount--;
                 tenCount++;
             } else { // 给20元的钱
-                if(tenCount != 0 && fiveCount != 0) {
+                if (tenCount != 0 && fiveCount != 0) {
                     tenCount--;
                     fiveCount--;
                 } else {
-                    if(fiveCount < 3) {
+                    if (fiveCount < 3) {
                         return false;
                     } else {
                         fiveCount -= 3;

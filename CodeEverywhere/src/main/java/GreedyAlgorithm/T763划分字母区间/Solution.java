@@ -1,4 +1,4 @@
-package T763划分字母区间;
+package GreedyAlgorithm.T763划分字母区间;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -19,22 +19,22 @@ public class Solution {
 
     }
 
-    public static List<Integer>  partitionLabels(String s) {
+    public static List<Integer> partitionLabels(String s) {
         List<Integer> res = new LinkedList<>();
         int[] edge = new int[26];
         char[] chars = s.toCharArray();
-        for(int i = 0;i<chars.length;i++){
+        for (int i = 0; i < chars.length; i++) {
 //            edge[i] = chars[i] - 'a';
             edge[chars[i] - 'a'] = i;
         }
 
-        int index= 0;
+        int index = 0;
         int last = -1;//记录上一段字符串的最后位置
 
-        for(int i = 0;i<chars.length;i++){
-            index = Math.max(index,edge[chars[i] - 'a']);
-            if(i == index){//该段字符串划分结束
-                res.add(i-last);
+        for (int i = 0; i < chars.length; i++) {
+            index = Math.max(index, edge[chars[i] - 'a']);
+            if (i == index) {//该段字符串划分结束
+                res.add(i - last);
                 last = i;
             }
         }

@@ -1,4 +1,4 @@
-package T406根据身高重建队列;
+package GreedyAlgorithm.T406根据身高重建队列;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -21,8 +21,8 @@ public class Solution {
             }
         });
         LinkedList<int[]> que = new LinkedList<>();
-        for(int[] p : people){
-            que.add(p[1],p);   //Linkedlist.add(index, value)，會將value插入到指定index裡。
+        for (int[] p : people) {
+            que.add(p[1], p);   //Linkedlist.add(index, value)，會將value插入到指定index裡。
         }
         return que.toArray(new int[people.length][2]);
     }
@@ -33,7 +33,7 @@ public class Solution {
         int peopleNum = sc.nextInt();
         int[][] people = new int[peopleNum][2];
         System.out.println("请输入每个人身高和前面比他高的人：");
-        for(int i = 0;i<peopleNum;i++){
+        for (int i = 0; i < peopleNum; i++) {
             int height = sc.nextInt();
             int num = sc.nextInt();
             people[i][0] = height;

@@ -1,8 +1,6 @@
-package T452用最少数量的箭引爆气球;
+package GreedyAlgorithm.T452用最少数量的箭引爆气球;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Scanner;
 
 /**
@@ -10,20 +8,20 @@ import java.util.Scanner;
  * @CreateTime: 2024-06-16
  */
 public class Solution {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入气球数：");
         int num = sc.nextInt();
         int[][] points = new int[num][2];
-        for(int i = 0;i<num;i++){
-            int x= sc.nextInt();
+        for (int i = 0; i < num; i++) {
+            int x = sc.nextInt();
             int y = sc.nextInt();
             points[i][0] = x;
             points[i][1] = y;
         }
         int x = findMinArrowShots(points);
-        System.out.println("最少需要："+ x);
-        for(int i=0;i<num;i++){
+        System.out.println("最少需要：" + x);
+        for (int i = 0; i < num; i++) {
             System.out.println(points[i][0] + " " + points[i][1]);
         }
     }
