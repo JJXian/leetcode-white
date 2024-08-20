@@ -1,4 +1,4 @@
-package GreedyAlgorithm.T738.单调递增的数字;
+package xian.GreedyAlgorithm.T738.单调递增的数字;
 
 import java.util.Scanner;
 

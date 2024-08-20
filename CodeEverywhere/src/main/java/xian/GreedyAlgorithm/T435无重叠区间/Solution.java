@@ -1,4 +1,4 @@
-package GreedyAlgorithm.T435无重叠区间;
+package xian.GreedyAlgorithm.T435无重叠区间;
 
 import java.util.Arrays;
 import java.util.Scanner;

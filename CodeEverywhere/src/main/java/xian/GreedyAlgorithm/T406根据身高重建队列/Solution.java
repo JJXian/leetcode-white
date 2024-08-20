@@ -1,4 +1,4 @@
-package GreedyAlgorithm.T406根据身高重建队列;
+package xian.GreedyAlgorithm.T406根据身高重建队列;
 
 import java.util.Arrays;
 import java.util.LinkedList;

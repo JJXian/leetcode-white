@@ -1,4 +1,4 @@
-package GreedyAlgorithm.T763划分字母区间;
+package xian.GreedyAlgorithm.T763划分字母区间;
 
 import java.util.LinkedList;
 import java.util.List;

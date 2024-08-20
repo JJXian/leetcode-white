@@ -1,4 +1,4 @@
-package GreedyAlgorithm.T452用最少数量的箭引爆气球;
+package xian.GreedyAlgorithm.T452用最少数量的箭引爆气球;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package GreedyAlgorithm.T860柠檬水找零;
+package xian.GreedyAlgorithm.T860柠檬水找零;
 
 import java.util.Scanner;
 

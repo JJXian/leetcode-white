@@ -1,4 +1,4 @@
-package GreedyAlgorithm.T56合并区间;
+package xian.GreedyAlgorithm.T56合并区间;
 
 import java.util.LinkedList;
 import java.util.List;
