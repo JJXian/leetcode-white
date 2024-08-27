@@ -1,4 +1,4 @@
-package bishi.baidu.T3;
+package xian.bishi.baidu0825.T3;
 
 import java.util.Scanner;
 
