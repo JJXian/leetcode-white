@@ -9,6 +9,7 @@ public class Main {
         Main m = new Main();
         int res = m.orangesRotting(grid);
         System.out.println(res);
+
     }
 
     int count = 0;
