@@ -4,6 +4,7 @@ package T394字符串解码;
  * @Author: jjxian
  * @CreateTime: 2024-06-26
  */
+
 import java.util.Stack;
 
 public class Solution {
@@ -46,11 +47,12 @@ public class Solution {
 
         encodedString = "3[a2[c]]";
         decodedString = solution.decodeString(encodedString);
-        System.out.println(decodedString); // Output: "accaccacc"
+        System.out.println(decodedString);
 
 //        encodedString = "2[abc]3[cd]ef";
 //        decodedString = solution.decodeString(encodedString);
-//        System.out.println(decodedString); // Output: "abcabccdcdcdef"
+        // Output: "abcabccdcdcdef"
+//        System.out.println(decodedString);
     }
 }
 
