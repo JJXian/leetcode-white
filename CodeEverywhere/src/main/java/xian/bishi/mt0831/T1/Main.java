@@ -1,4 +1,4 @@
-package bishi.mt0831.T1;
+package xian.bishi.mt0831.T1;
 
 import java.util.Scanner;
 

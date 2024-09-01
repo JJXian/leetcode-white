@@ -1,4 +1,4 @@
-package bishi.xgd.T1;
+package xian.bishi.xgd.T1;
 
 import java.util.Scanner;
 import java.util.Stack;

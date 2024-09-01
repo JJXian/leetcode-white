@@ -1,4 +1,4 @@
-package bishi.xgd.T2;
+package xian.bishi.xgd.T2;
 
 import java.util.Scanner;
 
