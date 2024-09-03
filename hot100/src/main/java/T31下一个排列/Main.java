@@ -18,6 +18,13 @@ public class Main {
         int n = nums.length;
         int i = n - 2;
 
+        /**
+         * 从后往前找第一个逆序对的开始位置，
+         * 然后找该位置之后中第一个比nums[i]大的元素位置j
+         * 再交换这两个元素  最后逆转i之后的所有元素
+         *
+         */
+
         // 1. 找到第一个逆序对的位置 i
         while (i >= 0 && nums[i] >= nums[i + 1]) {
             i--;
