@@ -15,18 +15,17 @@ public class Solution {
         ListNode prev = dummy;
         ListNode current = pHead;
 
-        while(current != null){
+        while (current != null) {
             // 如果当前节点和下一个节点值相同
             boolean isDuplicate = false;
-            while(current.next != null && current.next.val == current.val){
+            while (current.next != null && current.next.val == current.val) {
                 current = current.next;
                 isDuplicate = true;
             }
-
-            if(isDuplicate){
-            // 跳过所有重复节点
+            if (isDuplicate) {
+                // 跳过所有重复节点
                 prev.next = current.next;
-            }else{
+            } else {
                 prev = prev.next;
             }
             // 向前移动current指针
