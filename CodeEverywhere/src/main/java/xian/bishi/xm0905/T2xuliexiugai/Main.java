@@ -1,4 +1,4 @@
-package bishi.xm0905.T2xuliexiugai;
+package xian.bishi.xm0905.T2xuliexiugai;
 
 import java.util.Scanner;
 
