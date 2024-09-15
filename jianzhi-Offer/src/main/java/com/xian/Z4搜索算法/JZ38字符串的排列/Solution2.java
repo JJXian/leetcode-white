@@ -3,22 +3,25 @@ package com.xian.Z4搜索算法.JZ38字符串的排列;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Solution {
+/**
+ * @Author: jjxian
+ */
+public class Solution2 {
     static ArrayList<String> res = new ArrayList<>();
     static StringBuilder path = new StringBuilder();
     static boolean[] used;
 
-    public static ArrayList<String> Permutation(String str) {
-        res.clear(); // 清空结果列表
-        if (str == null || str.length() == 0) {
-            return res;
-        }
-        used = new boolean[str.length()];
-        char[] chars = str.toCharArray();
-        Arrays.sort(chars); // 对字符数组进行排序‼️
-        backTrace(chars, 0);
-        return res;
+    public static void main(String[] args) {
+        String s = "a";
+//        ArrayList<String> res = findPaiLie(s);
+        used = new boolean[s.length()];
+        char[] temp = s.toCharArray();
+        Arrays.sort(temp);
+        backTrace(temp, 0);
+
+        System.out.println(res);
     }
+
 
     public static void backTrace(char[] chars, int index) {
         if (path.length() == chars.length) {
@@ -38,13 +41,12 @@ public class Solution {
             path.deleteCharAt(path.length() - 1); // 回溯，删除最后一个字符
         }
     }
-
-    public static void main(String[] args) {
-//        测试用例 aa ab aba
-        String str = "aba";
-        ArrayList<String> permutations = Permutation(str);
-        for (String perm : permutations) {
-            System.out.println(perm);
-        }
-    }
 }
+
+
+
+
+
+
+
+
