@@ -5,16 +5,51 @@ package com.xian.Z5动态规划.JZ85连续子数组的最大和二;
  */
 public class Solution {
 
+
     public static void main(String[] args) {
-        int[] array = {1,-2,3,10,-4,7,2,-5};
+        int[] array = {1, -2, 3, 10, -4, 7, 2, -5};
 //        int[] array = {1,2,-3,4,-1,1,-3,2};
-        int[] res = FindGreatestSumOfSubArray(array);
-        for(int num : res){
+//        int[] res = FindGreatestSumOfSubArray(array);
+        int[] res = finf(array);
+        for (int num : res) {
             System.out.println(num);
         }
     }
 
-    public static int[] FindGreatestSumOfSubArray(int[] array){
+    public static int[] finf(int[] array) {
+        int[] dp = new int[array.length];
+        dp[0] = array[0];
+        int maxSum = dp[0];
+
+        int left = 0, right = 0;
+        int resl = 0, resr = 0;
+        for (int i = 1; i < array.length; i++) {
+            right++;
+            dp[i] = Math.max(dp[i - 1] + array[i], array[i]);
+            if (dp[i - 1] + array[i] < array[i]) {
+                left = right;
+            }
+
+            if (dp[i] > maxSum || dp[i] == maxSum && (right - left + 1) > (resr - resl + 1)) {
+                maxSum = dp[i - 1] + array[i];
+                resl = left;
+                resr = right;
+            }
+
+        }
+
+        int[] res = new int[resr - left + 1];
+        int index = 0;
+        for (int i = resl; i <= resr; i++) {
+            res[index++] = array[i];
+        }
+        return res;
+
+
+    }
+
+
+    public static int[] FindGreatestSumOfSubArray(int[] array) {
         //记录到下标i为止的最大连续子数组和
         int[] dp = new int[array.length];
         dp[0] = array[0];
@@ -23,15 +58,15 @@ public class Solution {
         int left = 0, right = 0;
         //记录最长的区间
         int resl = 0, resr = 0;
-        for(int i = 1; i < array.length; i++){
+        for (int i = 1; i < array.length; i++) {
             right++;
             //状态转移：连续子数组和最大值
             dp[i] = Math.max(dp[i - 1] + array[i], array[i]);
             //区间新起点
-            if(dp[i - 1] + array[i] < array[i])
+            if (dp[i - 1] + array[i] < array[i])
                 left = right;
             //更新最大值
-            if(dp[i] > maxsum || dp[i] == maxsum && (right - left + 1) > (resr - resl + 1)){
+            if (dp[i] > maxsum || dp[i] == maxsum && (right - left + 1) > (resr - resl + 1)) {
                 maxsum = dp[i];
                 resl = left;
                 resr = right;
@@ -39,7 +74,7 @@ public class Solution {
         }
         //取数组
         int[] res = new int[resr - resl + 1];
-        for(int i = resl; i <= resr; i++)
+        for (int i = resl; i <= resr; i++)
             res[i - resl] = array[i];
         return res;
     }
